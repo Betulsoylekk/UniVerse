@@ -1,0 +1,139 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set background image to cover the entire page with transparency */
+body {
+  background-image: url('/universe.jpg'); /* Path to your image */
+  background-size: cover; /* Ensures the image covers the entire viewport */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh; /* Ensure the body takes full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Apply transparent overlay */
+.login-container {
+  background-color: rgba(255, 255, 255, 0.7); /* White with 70% transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%; /* Full height */
+  position: absolute; /* To make the container stretch over the entire page */
+}
+
+/* Form container */
+.form-container {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  z-index: 1; /* Ensure form appears above the background */
+}
+
+/* Heading style */
+h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input fields styling */
+.input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  border-color: #03dac6;
+  outline: none;
+}
+
+/* Button styling */
+.submit-button {
+  background-color: #03dac6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #018786;
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Links container */
+.links {
+  margin-top: 20px;
+}
+
+/* Styling the links */
+.links a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: #0056b3;
+}
+
+.links a:focus {
+  outline: none;
+}
+
+/* Additional Link Styles for Better User Experience */
+.links a + a {
+  margin-left: 10px; /* Space between links */
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .input {
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    font-size: 0.9rem;
+  }
+}
